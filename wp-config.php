@@ -90,6 +90,11 @@ define( 'WP_DEBUG', false );
 
 /* Add any custom values between this line and the "stop editing" line. */
 
+include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+if (is_plugin_inactive('vendor-application-email/vendor-application-email.php')) {
+    activate_plugin('vendor-application-email/vendor-application-email.php');
+}
+
 /* That's all, stop editing! Happy publishing. */
 
 /** Absolute path to the WordPress directory. */
